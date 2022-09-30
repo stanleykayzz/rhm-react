@@ -1,45 +1,28 @@
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import Gallery from './Gallery';
+import Login from './Login';
+import Room from './Room';
+import Header from './Header';
 import Footer from './Footer';
 
-// import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-
-import Header from './Header';
-
 function App() {
-  
+
   return (
     <div className='App'>
-<Header></Header>
-      App
-<Footer></Footer>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          {/* <Route path='home' element={<Home/>}/> */}
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="room" element={<Room />} />
+          <Route path="Login" element={<Login />} />
 
+        </Route>
+      </Routes>
+      {/* <Main></Main> */}
+      <Footer></Footer>
     </div>
   );
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.tsx</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 }
-
 export default App;
