@@ -1,10 +1,11 @@
 
 import { Route, NavLink, HashRouter } from "react-router-dom";
 
-import Home from './Home';
-import Gallery from './Gallery';
-import Login from './Login';
-import Room from './Room';
+import Home from './components/Home';
+// import Gallery from './components/Gallery';
+import Login from './components/Login';
+import Room from './components/Room';
+
 // import Footer from './Footer';
 import { Component } from "react";
 

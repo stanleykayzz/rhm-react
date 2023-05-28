@@ -3,6 +3,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/esm/Container';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import Row from 'react-bootstrap';
+import PictureBanner from '../PictureBanner';
 
 
 export default function Header(): JSX.Element {
@@ -21,7 +22,9 @@ export default function Header(): JSX.Element {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               {/* {titles} */}
-              <Nav.Link >Accueil</Nav.Link>
+              <Nav.Link >
+              <Link to={'/home'} >Accueil</Link>
+              </Nav.Link>
               <Nav.Link>
                 <Link to='/gallery' >Galerie</Link>
               </Nav.Link>
@@ -30,6 +33,9 @@ export default function Header(): JSX.Element {
               </Nav.Link>
               <Nav.Link>
                 <Link to={'/login'} >Connexion</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to={'/contact'} >Contact</Link>
               </Nav.Link>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -46,7 +52,8 @@ export default function Header(): JSX.Element {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* <hr /> */}
+      <hr />
+      <PictureBanner/>
       <Outlet />
     </div>
   );
